@@ -14,7 +14,7 @@ It was used in a project to generate forms based on another page
 ?>
 ```
 
-##Or returning json format
+## Or returning json format
 ```php
 <?php
   require_once("/path/to/class.form.crawler.php");  
