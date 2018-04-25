@@ -10,6 +10,7 @@
 		function __construct($url) {			
 	        $this->url = $url; 
 	    }
+	    
 	    public function build() {
 	    	$this->loadHTMLFile($this->url);		
 	    	$xpath = new DOMXPath($this);
@@ -44,9 +45,3 @@
 	    	return json_encode($this->build()->inputs);
 	    }
 	}
-
-	$form = new FormCrawler("http://www.henrimar.com.br/contato/");
-	echo $form->fields(['input', 'select', 'textarea'])->attrs(['type', 'name', 'value'])->getJson();
-
-
-?>
